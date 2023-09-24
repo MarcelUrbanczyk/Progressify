@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MarcelUrbanczyk/Projectize/static/css/main.073c9b0a.css",
+    "main.js": "/MarcelUrbanczyk/Projectize/static/js/main.6d63c34e.js",
+    "static/js/787.e272d9c6.chunk.js": "/MarcelUrbanczyk/Projectize/static/js/787.e272d9c6.chunk.js",
+    "static/media/logo.svg": "/MarcelUrbanczyk/Projectize/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/MarcelUrbanczyk/Projectize/index.html",
+    "main.073c9b0a.css.map": "/MarcelUrbanczyk/Projectize/static/css/main.073c9b0a.css.map",
+    "main.6d63c34e.js.map": "/MarcelUrbanczyk/Projectize/static/js/main.6d63c34e.js.map",
+    "787.e272d9c6.chunk.js.map": "/MarcelUrbanczyk/Projectize/static/js/787.e272d9c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.6d63c34e.js"
+  ]
+}
