@@ -12,4 +12,5 @@ export const theme = {
     },
     text: colorCollection.snowDrift,
   },
+  boxshadow: "0px 4px 10px 2px rgba(64, 78, 92, 0.50)",
 };
