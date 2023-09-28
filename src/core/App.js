@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getWidth } from "../common/getWidth";
+import MobileApp from "./MobileApp";
 
 const App = () => {
   const [viewportWidth, setViewportWidth] = useState(null);
@@ -15,7 +16,10 @@ const App = () => {
     };
   }, [viewportWidth]);
   console.log(viewportWidth);
-  return <></>;
+  if (viewportWidth > 1000) {
+    return <></>;
+  }
+  return <MobileApp />;
 };
 
 export default App;
