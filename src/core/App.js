@@ -15,11 +15,7 @@ const App = () => {
       window.removeEventListener("resize", updateViewportWidth);
     };
   }, [viewportWidth]);
-  console.log(viewportWidth);
-  if (viewportWidth > 1000) {
-    return <></>;
-  }
-  return <MobileApp />;
+  return viewportWidth > 1000 ? <></> : <MobileApp />;
 };
 
 export default App;
