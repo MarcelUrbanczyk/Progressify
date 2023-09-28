@@ -15,20 +15,20 @@ export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background.box};
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   box-shadow: ${({ theme }) => theme.shadows.nav};
 `;
 
 export const Menu = styled(MenuIcon)`
   height: auto;
-  width: 24px;
-  margin-top: 4px;
+  width: 28px;
+  margin: 14px 10px 10px;
 `;
 
 export const Options = styled(OptionsIcon)`
   height: auto;
-  width: 24px;
-  margin-top: 4px;
+  width: 28px;
+  margin: 14px 10px 10px;
 `;
 
 export const Link = styled.a`
