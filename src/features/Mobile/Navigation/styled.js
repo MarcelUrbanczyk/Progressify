@@ -16,7 +16,7 @@ export const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  box-shadow: ${({ theme }) => theme.boxshadow};
+  box-shadow: ${({ theme }) => theme.shadows.nav};
 `;
 
 export const Menu = styled(MenuIcon)`
