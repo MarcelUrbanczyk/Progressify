@@ -4,7 +4,7 @@ const colorCollection = {
   snowDrift: "#F2F7F2",
 };
 
-const theme = {
+export const theme = {
   colors: {
     background: {
       box: colorCollection.riverBed,
