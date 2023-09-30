@@ -2,6 +2,7 @@ const colorCollection = {
   riverBed: "#404E5C",
   blueBayoux: "#4F6272",
   snowDrift: "#F2F7F2",
+  ebonyClay: "#202933",
 };
 
 export const theme = {
@@ -9,6 +10,7 @@ export const theme = {
     background: {
       box: colorCollection.riverBed,
       page: colorCollection.blueBayoux,
+      item: colorCollection.ebonyClay,
     },
     text: colorCollection.snowDrift,
   },
