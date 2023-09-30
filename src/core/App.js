@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getWidth } from "../common/getWidth";
-import MobileApp from "./MobileApp";
+import MobileApp from "../features/Mobile/index";
 
 const App = () => {
   const [viewportWidth, setViewportWidth] = useState(null);
