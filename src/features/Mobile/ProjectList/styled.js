@@ -7,8 +7,8 @@ export const Section = styled.section`
 `;
 
 export const Project = styled.div`
-  border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.background.box};
+  border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.item};
   height: 220px;
 `;

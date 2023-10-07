@@ -13,22 +13,22 @@ export const Header = styled.h1`
 export const StyledNavigation = styled.nav`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background.box};
+  box-shadow: ${({ theme }) => theme.shadows.nav};
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  box-shadow: ${({ theme }) => theme.shadows.nav};
 `;
 
 export const Menu = styled(MenuIcon)`
   height: auto;
-  width: 28px;
   margin: 14px 10px 10px;
+  width: 28px;
 `;
 
 export const Options = styled(OptionsIcon)`
   height: auto;
-  width: 28px;
   margin: 14px 10px 10px;
+  width: 28px;
 `;
 
 export const Link = styled.a`
