@@ -1,3 +1,4 @@
+import React from "react";
 import { Section, Project } from "./styled";
 
 const ProjectList = () => (

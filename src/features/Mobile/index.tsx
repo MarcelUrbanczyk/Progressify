@@ -1,6 +1,7 @@
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/index";
 import { Main } from "../../common/Main";
-import ProjectList from "./ProjectList";
+import ProjectList from "./ProjectList/index";
+import React from "react";
 
 const MobileApp = () => (
   <>
