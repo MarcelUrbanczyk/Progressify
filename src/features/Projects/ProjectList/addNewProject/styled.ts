@@ -31,3 +31,32 @@ export const Paragraph = styled.p`
   font-weight: 300;
   user-select: none;
 `;
+
+export const Divider = styled.hr`
+  width: 97%;
+  height: 1px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+`;
+
+export const Form = styled.form`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 10px;
+  grid-row-gap: 12px;
+`;
+
+export const Label = styled.label`
+  color: white;
+  font-weight: 300;
+`;
+
+export const Input = styled.input`
+  background-color: #28323c;
+  border-radius: 4px;
+  width: 120px;
+  color: white;
+  border: 1px solid #4f6272;
+`;
