@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  align-content: center;
   display: flex;
   gap: 12px;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
 `;
 
-export const Button = styled.button`
+export const TaskCreatorWrapper = styled(Wrapper)`
+  padding: 5px;
+`;
+
+export const TaskWrapper = styled(TaskCreatorWrapper)`
+  justify-content: space-between;
+`;
+
+export const ProjectButton = styled.button`
   background-color: #28323c;
   border: none;
   border-radius: 12px;
@@ -20,6 +27,21 @@ export const Button = styled.button`
   &:hover {
     transform: scale(1.05);
   }
+`;
+
+export const TaskButton = styled(ProjectButton)`
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+`;
+
+export const SubmitButton = styled(ProjectButton)`
+  height: 30px;
+  width: auto;
+  text-align: center;
+  color: white;
+  font-family: "Mitr";
+  font-weight: 300;
 `;
 
 export const Paragraph = styled.p`
@@ -35,6 +57,7 @@ export const Paragraph = styled.p`
 export const Divider = styled.hr`
   width: 97%;
   height: 1px;
+  margin: 5px;
   border: none;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
