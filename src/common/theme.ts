@@ -9,6 +9,7 @@ export const theme = {
   colors: {
     background: {
       box: colorCollection.riverBed,
+      alternativeBox: colorCollection.blueBayoux,
       page: colorCollection.blueBayoux,
       item: colorCollection.ebonyClay,
     },
