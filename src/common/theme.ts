@@ -1,8 +1,8 @@
 const colorCollection = {
-  riverBed: "#404E5C",
   blueBayoux: "#4F6272",
-  snowDrift: "#F2F7F2",
   ebonyClay: "#202933",
+  riverBed: "#404E5C",
+  snowDrift: "#F2F7F2",
 };
 
 export const theme = {
