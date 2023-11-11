@@ -18,7 +18,6 @@ export const StyledNavigation = styled.nav`
 `;
 
 export const Link = styled.a`
-  margin: 0;
   margin: 14px 10px 10px;
   padding: 0;
 `;
