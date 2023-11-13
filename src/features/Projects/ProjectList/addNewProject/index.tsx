@@ -17,6 +17,7 @@ import { useState } from "react";
 import React from "react";
 import { AlternativeBox } from "../../../../common/alternativeBox";
 import TrashBinIcon from "./trashbinIcon";
+import { Box } from "../../../../common/box";
 
 export default () => {
   interface Task {
@@ -43,20 +44,22 @@ export default () => {
 
   if (!addNewProject) {
     return (
-      <Wrapper>
-        <ProjectButton
-          onClick={() => {
-            setAddNewProject(!addNewProject);
-          }}
-        >
-          {!addNewProject ? <PlusIcon /> : <MinusIcon />}
-        </ProjectButton>
-        <Paragraph>Add new project</Paragraph>
-      </Wrapper>
+      <Box>
+        <Wrapper>
+          <ProjectButton
+            onClick={() => {
+              setAddNewProject(!addNewProject);
+            }}
+          >
+            {!addNewProject ? <PlusIcon /> : <MinusIcon />}
+          </ProjectButton>
+          <Paragraph>Add new project</Paragraph>
+        </Wrapper>
+      </Box>
     );
   }
   return (
-    <>
+    <Box style={{ maxHeight: "500px" }}>
       <Wrapper>
         <ProjectButton
           onClick={() => {
@@ -89,7 +92,22 @@ export default () => {
         />
       </Form>
 
-      <AlternativeBox>
+      {tasks.length > 0 &&
+        tasks.map((task) => (
+          <AlternativeBox>
+            <TaskWrapper>
+              <Paragraph>{task.name}</Paragraph>
+              <TrashBinIcon
+                onClick={() => {
+                  setTasks(tasks.filter((t) => t.name !== task.name));
+                }}
+              />
+            </TaskWrapper>
+          </AlternativeBox>
+        ))}
+      <AlternativeBox
+        style={!addNewTask ? { maxHeight: "40px" } : { maxHeight: "200px" }}
+      >
         <TaskCreatorWrapper>
           <TaskButton
             onClick={() => {
@@ -115,19 +133,6 @@ export default () => {
           </Form>
         )}
       </AlternativeBox>
-      {tasks.length > 0 &&
-        tasks.map((task) => (
-          <AlternativeBox>
-            <TaskWrapper>
-              <Paragraph>{task.name}</Paragraph>
-              <TrashBinIcon
-                onClick={() => {
-                  setTasks(tasks.filter((t) => t.name !== task.name));
-                }}
-              />
-            </TaskWrapper>
-          </AlternativeBox>
-        ))}
-    </>
+    </Box>
   );
 };
