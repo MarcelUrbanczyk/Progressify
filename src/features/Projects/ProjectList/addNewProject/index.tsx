@@ -5,13 +5,14 @@ import {
   ProjectButton,
   Paragraph,
   Divider,
-  Form,
   Label,
   Input,
   TaskButton,
   TaskCreatorWrapper,
-  SubmitButton,
-  TaskWrapper,
+  TaskSubmitButton,
+  TaskTileWrapper,
+  FormWrapper,
+  ProjectSubmitButton,
 } from "./styled";
 import { useState } from "react";
 import React from "react";
@@ -32,13 +33,21 @@ export default () => {
   const [taskName, setTaskName] = useState("");
   const [tasks, setTasks] = useState([] as Task[]);
 
-  console.log(tasks);
-
   const addTask = () => {
     if (taskName !== "") {
       setTasks([...tasks, { name: taskName.trim(), isDone: false }]);
       setTaskName("");
       setAddNewTask(false);
+    }
+  };
+
+  const onFormSubmit = () => {
+    if (projectName !== "" && projectDeadline !== "") {
+      console.log(projectName, projectDeadline, tasks);
+      setProjectName("");
+      setProjectDeadline("");
+      setTasks([]);
+      setAddNewProject(false);
     }
   };
 
@@ -71,68 +80,74 @@ export default () => {
         <Paragraph>Project creation</Paragraph>
       </Wrapper>
       <Divider />
-      <Form>
-        <Label>Project name: </Label>
-        <Input
-          type="text"
-          required
-          value={projectName}
-          onChange={(event) => {
-            setProjectName(event.target.value);
-          }}
-        />
-        <Label>Deadline: </Label>
-        <Input
-          type="date"
-          required
-          value={projectDeadline}
-          onChange={(event) => {
-            setProjectDeadline(event.target.value);
-          }}
-        />
-      </Form>
+      <form>
+        <FormWrapper>
+          <Label>Project name: </Label>
+          <Input
+            type="text"
+            required
+            value={projectName}
+            onChange={(event) => {
+              setProjectName(event.target.value);
+            }}
+          />
+          <Label>Deadline: </Label>
+          <Input
+            type="date"
+            required
+            value={projectDeadline}
+            onChange={(event) => {
+              setProjectDeadline(event.target.value);
+            }}
+          />
+        </FormWrapper>
 
-      {tasks.length > 0 &&
-        tasks.map((task) => (
-          <AlternativeBox>
-            <TaskWrapper>
-              <Paragraph>{task.name}</Paragraph>
-              <TrashBinIcon
-                onClick={() => {
-                  setTasks(tasks.filter((t) => t.name !== task.name));
+        {tasks.length > 0 &&
+          tasks.map((task) => (
+            <AlternativeBox>
+              <TaskTileWrapper>
+                <Paragraph>{task.name}</Paragraph>
+                <TrashBinIcon
+                  onClick={() => {
+                    setTasks(tasks.filter((t) => t.name !== task.name));
+                  }}
+                />
+              </TaskTileWrapper>
+            </AlternativeBox>
+          ))}
+
+        <AlternativeBox
+          style={!addNewTask ? { maxHeight: "40px" } : { maxHeight: "200px" }}
+        >
+          <TaskCreatorWrapper>
+            <TaskButton
+              onClick={() => {
+                setAddNewTask(!addNewTask);
+              }}
+            >
+              {!addNewTask ? <PlusIcon /> : <MinusIcon />}{" "}
+            </TaskButton>
+            <Paragraph>{!addNewTask ? "Add new task" : "Set task"}</Paragraph>
+          </TaskCreatorWrapper>
+          {addNewTask && (
+            <FormWrapper>
+              <Label>Task name: </Label>
+              <Input
+                type="text"
+                required
+                value={taskName}
+                onChange={(event) => {
+                  setTaskName(event.target.value);
                 }}
               />
-            </TaskWrapper>
-          </AlternativeBox>
-        ))}
-      <AlternativeBox
-        style={!addNewTask ? { maxHeight: "40px" } : { maxHeight: "200px" }}
-      >
-        <TaskCreatorWrapper>
-          <TaskButton
-            onClick={() => {
-              setAddNewTask(!addNewTask);
-            }}
-          >
-            {!addNewTask ? <PlusIcon /> : <MinusIcon />}{" "}
-          </TaskButton>
-          <Paragraph>{!addNewTask ? "Add new task" : "Set task"}</Paragraph>
-        </TaskCreatorWrapper>
-        {addNewTask && (
-          <Form>
-            <Label>Task name: </Label>
-            <Input
-              type="text"
-              required
-              value={taskName}
-              onChange={(event) => {
-                setTaskName(event.target.value);
-              }}
-            />
-            <SubmitButton onClick={addTask}>Add task</SubmitButton>
-          </Form>
-        )}
-      </AlternativeBox>
+              <TaskSubmitButton onClick={addTask}>Add task</TaskSubmitButton>
+            </FormWrapper>
+          )}
+        </AlternativeBox>
+      </form>
+      <ProjectSubmitButton onClick={onFormSubmit}>
+        Create project
+      </ProjectSubmitButton>
     </Box>
   );
 };
