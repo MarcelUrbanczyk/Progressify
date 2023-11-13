@@ -5,5 +5,6 @@ export const AlternativeBox = styled.div`
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.item};
   margin: 10px;
-  min-height: 30px;
+  max-height: 40px;
+  transition: 0.5s;
 `;
