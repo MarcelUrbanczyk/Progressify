@@ -7,4 +7,5 @@ export const Box = styled.div`
   max-height: 60px;
   transition: all 0.5s;
   overflow: hidden;
+  padding: 10px;
 `;

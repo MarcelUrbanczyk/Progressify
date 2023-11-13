@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.span`
   display: flex;
   gap: 12px;
   align-items: center;
   padding: 10px;
 `;
 
-export const TaskCreatorWrapper = styled(Wrapper)`
+export const TaskCreatorWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
   padding: 5px;
 `;
 
-export const TaskWrapper = styled(TaskCreatorWrapper)`
+export const TaskTileWrapper = styled.span`
+  padding: 5px;
+  display: flex;
   justify-content: space-between;
 `;
 
@@ -35,13 +41,19 @@ export const TaskButton = styled(ProjectButton)`
   height: 20px;
 `;
 
-export const SubmitButton = styled(ProjectButton)`
+export const TaskSubmitButton = styled(ProjectButton)`
   height: 30px;
   width: auto;
   text-align: center;
   color: white;
   font-family: "Mitr";
   font-weight: 300;
+  padding: 0 10px;
+  border-radius: 4px;
+`;
+
+export const ProjectSubmitButton = styled(TaskSubmitButton)`
+  margin: 10px;
 `;
 
 export const Paragraph = styled.p`
@@ -63,7 +75,7 @@ export const Divider = styled.hr`
   background-color: rgba(255, 255, 255, 0.2);
 `;
 
-export const Form = styled.form`
+export const FormWrapper = styled.span`
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;

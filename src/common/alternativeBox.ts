@@ -7,4 +7,6 @@ export const AlternativeBox = styled.div`
   margin: 10px;
   max-height: 40px;
   transition: 0.5s;
+  grid-column-start: 1;
+  grid-column-end: 3;
 `;
