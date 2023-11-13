@@ -5,9 +5,7 @@ import AddNewProject from "./addNewProject";
 
 const ProjectList = () => (
   <Section>
-    <Box>
-      <AddNewProject />
-    </Box>
+    <AddNewProject />
     <Box></Box>
   </Section>
 );
