@@ -19,6 +19,10 @@ import React from "react";
 import { AlternativeBox } from "../../../../common/alternativeBox";
 import TrashBinIcon from "./trashbinIcon";
 import { Box } from "../../../../common/box";
+import { nanoid } from "nanoid";
+import { formatDate } from "../../../formatDate";
+import { useAppDispatch } from "../../../reduxHooks";
+import { addProject } from "../../projectSlice";
 
 export default () => {
   interface Task {
@@ -33,6 +37,8 @@ export default () => {
   const [taskName, setTaskName] = useState("");
   const [tasks, setTasks] = useState([] as Task[]);
 
+  const dispatch = useAppDispatch();
+
   const addTask = () => {
     if (taskName !== "") {
       setTasks([...tasks, { name: taskName.trim(), isDone: false }]);
@@ -42,12 +48,20 @@ export default () => {
   };
 
   const onFormSubmit = () => {
-    if (projectName !== "" && projectDeadline !== "") {
+    if (projectName && projectDeadline && tasks.length > 0) {
       console.log(projectName, projectDeadline, tasks);
       setProjectName("");
       setProjectDeadline("");
       setTasks([]);
       setAddNewProject(false);
+      const newProject = {
+        creationDate: formatDate(new Date()),
+        deadline: projectDeadline,
+        name: projectName,
+        tasks: tasks,
+        id: nanoid(),
+      };
+      dispatch(addProject(newProject));
     }
   };
 
