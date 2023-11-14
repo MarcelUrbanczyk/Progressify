@@ -12,6 +12,7 @@ export const theme = {
       alternativeBox: colorCollection.blueBayoux,
       page: colorCollection.blueBayoux,
       item: colorCollection.ebonyClay,
+      dark: colorCollection.ebonyClay,
     },
     text: colorCollection.snowDrift,
   },
