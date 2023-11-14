@@ -28,6 +28,7 @@ export default () => {
   interface Task {
     name: string;
     isDone: boolean;
+    id: string;
   }
 
   const [addNewProject, setAddNewProject] = useState(true);
@@ -41,7 +42,10 @@ export default () => {
 
   const addTask = () => {
     if (taskName !== "") {
-      setTasks([...tasks, { name: taskName.trim(), isDone: false }]);
+      setTasks([
+        ...tasks,
+        { name: taskName.trim(), isDone: false, id: nanoid() },
+      ]);
       setTaskName("");
       setAddNewTask(false);
     }
@@ -123,7 +127,7 @@ export default () => {
                 <Paragraph>{task.name}</Paragraph>
                 <TrashBinIcon
                   onClick={() => {
-                    setTasks(tasks.filter((t) => t.name !== task.name));
+                    setTasks(tasks.filter((t) => t.id !== task.id));
                   }}
                 />
               </TaskTileWrapper>
