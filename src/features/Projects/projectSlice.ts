@@ -14,8 +14,17 @@ interface projectState {
   id: string;
 }
 
-const initialState: projectState[] = [];
+//const initialState: projectState[] = [];
 
+const initialState: projectState[] = [
+  {
+    creationDate: new Date(),
+    deadline: new Date(),
+    name: "test",
+    tasks: [{ name: "test", isDone: false, deadline: new Date() }],
+    id: "1",
+  },
+];
 const projectsSlice = createSlice({
   name: "projects",
   initialState,
@@ -28,5 +37,7 @@ const projectsSlice = createSlice({
     },
   },
 });
+
+export const { addProject, removeProject } = projectsSlice.actions;
 
 export default projectsSlice.reducer;
