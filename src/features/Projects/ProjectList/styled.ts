@@ -22,6 +22,14 @@ interface TitleProps {
   slide?: boolean;
 }
 
+export const IconWrapper = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-height: 20px;
+  overflow: hidden;
+`;
+
 export const Section = styled.section`
   display: flex;
   flex-direction: column;

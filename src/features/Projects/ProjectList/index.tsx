@@ -7,6 +7,7 @@ import {
   ProjectWrapper,
   TasksCompleted,
   TitleWrapper,
+  IconWrapper,
 } from "./styled";
 import AddNewProject from "./addNewProject";
 import { useAppSelector } from "../../reduxHooks";
@@ -34,7 +35,9 @@ const ProjectList = () => {
                 "/" +
                 project.tasks.length}
             </TasksCompleted>
-            <ArrowToRight />
+            <IconWrapper>
+              <ArrowToRight />
+            </IconWrapper>
           </ProjectWrapper>
         </Box>
       ))}
