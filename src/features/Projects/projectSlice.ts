@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getFromLocalStorage } from "../localStorage";
 
 interface task {
   name: string;
@@ -14,20 +15,9 @@ interface projectState {
   id: string;
 }
 
-//const initialState: projectState[] = [];
-
-const initialState: projectState[] = [
-  {
-    creationDate: new Date(),
-    deadline: new Date(),
-    name: "test",
-    tasks: [{ name: "test", isDone: false, deadline: new Date() }],
-    id: "1",
-  },
-];
 const projectsSlice = createSlice({
   name: "projects",
-  initialState,
+  initialState: getFromLocalStorage("projects") as projectState[],
   reducers: {
     addProject: (state, action) => {
       state.push(action.payload);
