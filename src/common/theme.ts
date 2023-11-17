@@ -15,9 +15,14 @@ export const theme = {
       dark: colorCollection.ebonyClay,
     },
     text: colorCollection.snowDrift,
+    button: colorCollection.ebonyClay,
   },
   shadows: {
     nav: "0px 4px 10px 2px rgba(64, 78, 92, 0.50)",
     item: "1px 1px 2px 1px rgba(0, 0, 0, 0.25)",
+  },
+  breakpoints: {
+    mobileMax: "767px",
+    desktopMid: "1440px",
   },
 };
