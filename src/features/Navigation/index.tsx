@@ -1,17 +1,12 @@
-import { Header, StyledNavigation, Link } from "./styled";
 import React from "react";
-import Menu from "./menu";
-import Options from "./options";
+import { StyledNavigation, Header, Wrapper, ButtonWrapper } from "./styled";
 
 const Navigation = () => (
   <StyledNavigation>
-    <Link>
-      <Menu />
-    </Link>
-    <Header>Projectize</Header>
-    <Link>
-      <Options />
-    </Link>
+    <Wrapper>
+      <Header>Projectize</Header>
+      <ButtonWrapper></ButtonWrapper>
+    </Wrapper>
   </StyledNavigation>
 );
 
