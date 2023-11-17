@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "../../../common/box";
 import {
-  Section,
   Title,
   DaysLeft,
   ProjectWrapper,
@@ -17,7 +16,7 @@ import ArrowToRight from "./arrowToRight";
 const ProjectList = () => {
   const projects = useAppSelector((state) => state.projects);
   return (
-    <Section>
+    <>
       <AddNewProject />
       {projects.map((project) => (
         <Box key={project.id}>
@@ -41,7 +40,7 @@ const ProjectList = () => {
           </ProjectWrapper>
         </Box>
       ))}
-    </Section>
+    </>
   );
 };
 

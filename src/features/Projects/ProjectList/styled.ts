@@ -30,12 +30,6 @@ export const IconWrapper = styled.span`
   overflow: hidden;
 `;
 
-export const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
 export const Title = styled.h2<TitleProps>`
   color: ${({ theme }) => theme.colors.text};
   margin: 0;

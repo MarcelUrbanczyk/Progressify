@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonStyles } from "../../../../common/button";
 
 export const Wrapper = styled.span`
   display: flex;
@@ -42,17 +43,11 @@ export const TaskButton = styled(ProjectButton)`
 `;
 
 export const TaskSubmitButton = styled(ProjectButton)`
-  height: 30px;
-  width: auto;
-  text-align: center;
-  color: white;
-  font-family: "Mitr";
-  font-weight: 300;
-  padding: 0 10px;
-  border-radius: 4px;
+  ${ButtonStyles}
 `;
 
 export const ProjectSubmitButton = styled(TaskSubmitButton)`
+  ${ButtonStyles}
   margin: 10px;
 `;
 
