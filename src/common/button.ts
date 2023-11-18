@@ -7,7 +7,7 @@ export const ButtonStyles = css`
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  padding: 4px;
+  padding: 4px 10px;
   width: auto;
   height: auto;
   transition: 0.3s;
