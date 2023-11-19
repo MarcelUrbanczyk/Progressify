@@ -1,13 +1,13 @@
-import MobileNavigation from "../features/MobileNavigation/index";
 import { Main } from "../common/Main";
 import ProjectList from "../features/Projects/ProjectList/index";
 import React from "react";
-import Navigation from "../features/Navigation";
+import MobileNavigation from "../features/Navigation/Mobile";
+import DesktopNavigation from "../features/Navigation/Desktop";
 
 const App = () => {
   return (
     <>
-      <Navigation />
+      <DesktopNavigation />
       <MobileNavigation />
       <Main>
         <ProjectList />
