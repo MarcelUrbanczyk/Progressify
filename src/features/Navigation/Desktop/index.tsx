@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledNavigation, Header, Wrapper, ButtonWrapper } from "./styled";
 
-const Navigation = () => (
+const DesktopNavigation = () => (
   <StyledNavigation>
     <Wrapper>
       <Header>Projectize</Header>
@@ -10,4 +10,4 @@ const Navigation = () => (
   </StyledNavigation>
 );
 
-export default Navigation;
+export default DesktopNavigation;
