@@ -1,4 +1,4 @@
-import { keyframes, styled } from "styled-components";
+import { keyframes, styled, css } from "styled-components";
 
 const slideAnimation = keyframes` 
   0% {
@@ -42,6 +42,24 @@ export const TitleWrapper = styled.span`
   overflow: hidden;
 `;
 
+export const ProgressIndicator = styled.span<{ completion?: number }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  ${({ completion }) =>
+    css`
+      background: radial-gradient(
+          closest-side,
+          ${({ theme }) => theme.colors.background.box} 90%,
+          transparent 80% 100%
+        ),
+        conic-gradient(white ${completion}%, gray 0);
+    `}
+`;
+
 export const DaysLeft = styled.p`
   color: ${({ theme }) => theme.colors.text};
   margin: 0;
@@ -50,7 +68,9 @@ export const DaysLeft = styled.p`
   margin-top: 3px;
 `;
 
-export const TasksCompleted = styled(DaysLeft)``;
+export const TasksCompleted = styled(DaysLeft)`
+  margin-top: 0;
+`;
 
 export const ProjectWrapper = styled.div`
   display: grid;

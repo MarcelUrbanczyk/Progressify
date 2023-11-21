@@ -7,11 +7,13 @@ import {
   TasksCompleted,
   TitleWrapper,
   IconWrapper,
+  ProgressIndicator,
 } from "./styled";
 import AddNewProject from "./addNewProject";
 import { useAppSelector } from "../../reduxHooks";
 import getDaysLeft from "../../getDaysLeft";
 import ArrowToRight from "./arrowToRight";
+import { countPrecentage } from "../../countPrecentage";
 
 const ProjectList = () => {
   const projects = useAppSelector((state) => state.projects);
@@ -29,11 +31,18 @@ const ProjectList = () => {
                 ? "Expired"
                 : getDaysLeft(project.deadline) + " days left"}
             </DaysLeft>
-            <TasksCompleted>
-              {project.tasks.filter((task) => task.isDone).length +
-                "/" +
-                project.tasks.length}
-            </TasksCompleted>
+            <ProgressIndicator
+              completion={countPrecentage(
+                project.tasks.filter((task) => task.isDone).length,
+                project.tasks.length
+              )}
+            >
+              <TasksCompleted>
+                {project.tasks.filter((task) => task.isDone).length +
+                  "/" +
+                  project.tasks.length}
+              </TasksCompleted>
+            </ProgressIndicator>
             <IconWrapper>
               <ArrowToRight />
             </IconWrapper>
