@@ -62,7 +62,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Divider = styled.hr`
-  width: 97%;
+  width: 100%;
   height: 1px;
   margin: 5px;
   border: none;
