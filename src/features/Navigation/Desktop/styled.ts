@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonStyles } from "../../common/button";
+import { ButtonStyles } from "../../../common/button";
 
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background.box};
@@ -7,22 +7,32 @@ export const StyledNavigation = styled.nav`
   box-shadow: ${({ theme }) => theme.shadows.nav};
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     display: none;
+    visibility: hidden;
   }
 `;
 
-export const Navlink = styled.a`
+export const NavLink = styled.a`
   ${ButtonStyles}
+  border-radius: 16px;
 `;
 
 export const Wrapper = styled.span`
   margin: auto;
   max-width: 1000px;
   display: flex;
+  gap: 100px;
   align-items: center;
   height: 100%;
+  @media (max-width: 1040px) {
+    max-width: 95vw;
+  }
 `;
 
-export const ButtonWrapper = styled.span``;
+export const NavLinkWrapper = styled.span`
+  margin-top: 5px;
+  display: flex;
+  gap: 12px;
+`;
 
 export const Header = styled.h1`
   color: ${({ theme }) => theme.colors.text};
