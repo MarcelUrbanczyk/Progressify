@@ -1,6 +1,7 @@
 import PlusIcon from "./plusIcon";
 import MinusIcon from "./minusIcon";
 import {
+  Container,
   Wrapper,
   ProjectButton,
   Paragraph,
@@ -18,7 +19,6 @@ import { useState } from "react";
 import React from "react";
 import { AlternativeBox } from "../../../../common/alternativeBox";
 import TrashBinIcon from "./trashbinIcon";
-import { Box } from "../../../../common/box";
 import { nanoid } from "nanoid";
 import { formatDate } from "../../../formatDate";
 import { useAppDispatch } from "../../../reduxHooks";
@@ -71,7 +71,7 @@ export default () => {
 
   if (!addNewProject) {
     return (
-      <Box>
+      <Container>
         <Wrapper>
           <ProjectButton
             onClick={() => {
@@ -82,11 +82,11 @@ export default () => {
           </ProjectButton>
           <Paragraph>Add new project</Paragraph>
         </Wrapper>
-      </Box>
+      </Container>
     );
   }
   return (
-    <Box style={{ maxHeight: "500px" }}>
+    <Container style={{ maxHeight: "500px" }}>
       <Wrapper>
         <ProjectButton
           onClick={() => {
@@ -166,6 +166,6 @@ export default () => {
       <ProjectSubmitButton onClick={onFormSubmit}>
         Create project
       </ProjectSubmitButton>
-    </Box>
+    </Container>
   );
 };
