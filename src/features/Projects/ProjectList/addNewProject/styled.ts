@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { ButtonStyles } from "../../../../common/button";
+import { BoxStyles } from "../../../../common/box";
+
+export const Container = styled.div`
+  ${BoxStyles}
+`;
 
 export const Wrapper = styled.span`
   display: flex;

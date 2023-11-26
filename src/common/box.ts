@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { css } from "styled-components";
 
-export const Box = styled.div`
+export const BoxStyles = css`
   background-color: ${({ theme }) => theme.colors.background.box};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.item};

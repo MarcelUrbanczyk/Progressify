@@ -1,4 +1,5 @@
 import { keyframes, styled, css } from "styled-components";
+import { BoxStyles } from "../../../common/box";
 
 const slideAnimation = keyframes` 
   0% {
@@ -18,10 +19,6 @@ const slideAnimation = keyframes`
   }
 `;
 
-interface TitleProps {
-  slide?: boolean;
-}
-
 export const IconWrapper = styled.span`
   display: flex;
   justify-content: flex-end;
@@ -30,7 +27,7 @@ export const IconWrapper = styled.span`
   overflow: hidden;
 `;
 
-export const Title = styled.h2<TitleProps>`
+export const Title = styled.h2<{ slide?: boolean }>`
   color: ${({ theme }) => theme.colors.text};
   margin: 0;
   font-weight: 400;
@@ -72,7 +69,8 @@ export const TasksCompleted = styled(DaysLeft)`
   margin-top: 0;
 `;
 
-export const ProjectWrapper = styled.div`
+export const Project = styled.div`
+  ${BoxStyles}
   display: grid;
   grid-template-columns: 3fr 3fr 1fr 1fr;
   align-items: center;
