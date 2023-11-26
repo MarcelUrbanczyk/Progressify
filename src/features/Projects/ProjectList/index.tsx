@@ -1,9 +1,8 @@
 import React from "react";
-import { Box } from "../../../common/box";
 import {
   Title,
   DaysLeft,
-  ProjectWrapper,
+  Project,
   TasksCompleted,
   TitleWrapper,
   IconWrapper,
@@ -21,33 +20,31 @@ const ProjectList = () => {
     <>
       <AddNewProject />
       {projects.map((project) => (
-        <Box key={project.id}>
-          <ProjectWrapper>
-            <TitleWrapper>
-              <Title slide={project.name.length >= 9}>{project.name}</Title>
-            </TitleWrapper>
-            <DaysLeft>
-              {getDaysLeft(project.deadline) <= 0
-                ? "Expired"
-                : getDaysLeft(project.deadline) + " days left"}
-            </DaysLeft>
-            <ProgressIndicator
-              completion={countPrecentage(
-                project.tasks.filter((task) => task.isDone).length,
-                project.tasks.length
-              )}
-            >
-              <TasksCompleted>
-                {project.tasks.filter((task) => task.isDone).length +
-                  "/" +
-                  project.tasks.length}
-              </TasksCompleted>
-            </ProgressIndicator>
-            <IconWrapper>
-              <ArrowToRight />
-            </IconWrapper>
-          </ProjectWrapper>
-        </Box>
+        <Project key={project.id}>
+          <TitleWrapper>
+            <Title>{project.name}</Title>
+          </TitleWrapper>
+          <DaysLeft>
+            {getDaysLeft(project.deadline) <= 0
+              ? "Expired"
+              : getDaysLeft(project.deadline) + " days left"}
+          </DaysLeft>
+          <ProgressIndicator
+            completion={countPrecentage(
+              project.tasks.filter((task) => task.isDone).length,
+              project.tasks.length
+            )}
+          >
+            <TasksCompleted>
+              {project.tasks.filter((task) => task.isDone).length +
+                "/" +
+                project.tasks.length}
+            </TasksCompleted>
+          </ProgressIndicator>
+          <IconWrapper>
+            <ArrowToRight />
+          </IconWrapper>
+        </Project>
       ))}
     </>
   );
