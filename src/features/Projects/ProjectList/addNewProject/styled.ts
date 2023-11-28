@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ButtonStyles } from "../../../../common/button";
-import { BoxStyles } from "../../../../common/box";
+import { BoxStyles, AlternativeBoxStyles } from "../../../../common/box";
 
 export const Container = styled.div`
   ${BoxStyles}
@@ -21,7 +21,12 @@ export const TaskCreatorWrapper = styled.span`
   padding: 5px;
 `;
 
-export const TaskTileWrapper = styled.span`
+export const AlternativeBox = styled.div`
+  ${AlternativeBoxStyles}
+`;
+
+export const TaskTile = styled.span`
+  ${AlternativeBoxStyles}
   padding: 5px;
   display: flex;
   justify-content: space-between;
