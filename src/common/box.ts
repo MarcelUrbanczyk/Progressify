@@ -9,3 +9,14 @@ export const BoxStyles = css`
   overflow: hidden;
   padding: 10px;
 `;
+
+export const AlternativeBoxStyles = css`
+  background-color: ${({ theme }) => theme.colors.background.alternativeBox};
+  border-radius: 8px;
+  box-shadow: ${({ theme }) => theme.shadows.item};
+  margin: 10px;
+  max-height: 40px;
+  transition: 0.5s;
+  grid-column-start: 1;
+  grid-column-end: 3;
+`;
