@@ -1,6 +1,7 @@
 import PlusIcon from "./plusIcon";
 import MinusIcon from "./minusIcon";
 import {
+  AlternativeBox,
   Container,
   Wrapper,
   ProjectButton,
@@ -11,13 +12,12 @@ import {
   TaskButton,
   TaskCreatorWrapper,
   TaskSubmitButton,
-  TaskTileWrapper,
+  TaskTile,
   FormWrapper,
   ProjectSubmitButton,
 } from "./styled";
 import { useState } from "react";
 import React from "react";
-import { AlternativeBox } from "../../../../common/alternativeBox";
 import TrashBinIcon from "./trashbinIcon";
 import { nanoid } from "nanoid";
 import { formatDate } from "../../../formatDate";
@@ -122,16 +122,14 @@ export default () => {
 
         {tasks.length > 0 &&
           tasks.map((task) => (
-            <AlternativeBox>
-              <TaskTileWrapper>
-                <Paragraph>{task.name}</Paragraph>
-                <TrashBinIcon
-                  onClick={() => {
-                    setTasks(tasks.filter((t) => t.id !== task.id));
-                  }}
-                />
-              </TaskTileWrapper>
-            </AlternativeBox>
+            <TaskTile>
+              <Paragraph>{task.name}</Paragraph>
+              <TrashBinIcon
+                onClick={() => {
+                  setTasks(tasks.filter((t) => t.id !== task.id));
+                }}
+              />
+            </TaskTile>
           ))}
 
         <AlternativeBox
