@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ButtonStyles } from "../../../../common/button";
-import { BoxStyles, AlternativeBoxStyles } from "../../../../common/box";
+import { ButtonStyles } from "../../../../common/styles/button";
+import { BoxStyles, AlternativeBoxStyles } from "../../../../common/styles/box";
 
 export const Container = styled.div`
   ${BoxStyles}
