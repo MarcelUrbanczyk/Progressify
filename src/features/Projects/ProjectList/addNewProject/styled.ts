@@ -23,6 +23,8 @@ export const TaskCreatorWrapper = styled.span`
 
 export const AlternativeBox = styled.div`
   ${AlternativeBoxStyles}
+  grid-column-start: 1;
+  grid-column-end: 3;
 `;
 
 export const TaskTile = styled.span`
