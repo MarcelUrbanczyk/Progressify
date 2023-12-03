@@ -1,5 +1,5 @@
 import { keyframes, styled, css } from "styled-components";
-import { BoxStyles } from "../../../common/box";
+import { BoxStyles } from "../../../common/styles/box";
 
 const slideAnimation = keyframes` 
   0% {
@@ -50,7 +50,7 @@ export const ProgressIndicator = styled.span<{ completion?: number }>`
     css`
       background: radial-gradient(
           closest-side,
-          ${({ theme }) => theme.colors.background.box} 90%,
+          ${({ theme }) => theme.colors.button} 90%,
           transparent 80% 100%
         ),
         conic-gradient(white ${completion}%, gray 0);
@@ -75,4 +75,9 @@ export const Project = styled.div`
   grid-template-columns: 3fr 3fr 1fr 1fr;
   align-items: center;
   gap: 20px;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.button};
+    cursor: pointer;
+    transform: scale(1.02);
+  }
 `;
