@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 import { ButtonStyles } from "../../../common/styles/button";
 
 export const StyledNavigation = styled.nav`
@@ -11,9 +11,15 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<{ active?: boolean }>`
   ${ButtonStyles}
   border-radius: 16px;
+  ${({ active }) =>
+    active &&
+    css`
+      background-color: ${({ theme }) =>
+        theme.colors.background.alternativeBox};
+    `}
 `;
 
 export const Wrapper = styled.span`
