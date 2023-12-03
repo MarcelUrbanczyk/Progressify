@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonStyles } from "../../../common/button";
+import { ButtonStyles } from "../../../common/styles/button";
 
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background.box};
