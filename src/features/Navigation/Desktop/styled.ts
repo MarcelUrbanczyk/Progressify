@@ -1,5 +1,6 @@
 import { styled, css } from "styled-components";
 import { ButtonStyles } from "../../../common/styles/button";
+import { Link } from "react-router-dom";
 
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background.box};
@@ -11,7 +12,7 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const NavLink = styled.a<{ active?: boolean }>`
+export const NavLink = styled(Link)<{ active?: boolean }>`
   ${ButtonStyles}
   border-radius: 16px;
   ${({ active }) =>
