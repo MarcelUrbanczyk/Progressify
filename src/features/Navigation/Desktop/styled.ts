@@ -8,7 +8,6 @@ export const StyledNavigation = styled.nav`
   box-shadow: ${({ theme }) => theme.shadows.nav};
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     display: none;
-    visibility: hidden;
   }
 `;
 
