@@ -13,9 +13,9 @@ export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background.box};
   box-shadow: ${({ theme }) => theme.shadows.nav};
   display: none;
-  visibility: hidden;
   justify-content: space-between;
   padding: 10px;
+  visibility: hidden;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     display: flex;
   }
