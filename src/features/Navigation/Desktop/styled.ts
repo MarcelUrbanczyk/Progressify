@@ -3,7 +3,7 @@ import { ButtonStyles } from "../../../common/styles/button";
 import { Link } from "react-router-dom";
 
 export const StyledNavigation = styled.nav`
-  background-color: ${({ theme }) => theme.colors.background.box};
+  background-color: ${({ theme }) => theme.colors.background};
   box-shadow: ${({ theme }) => theme.shadows.nav};
   height: 100px;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
@@ -14,12 +14,16 @@ export const StyledNavigation = styled.nav`
 export const NavLink = styled(Link)<{ active?: boolean }>`
   ${ButtonStyles}
   border-radius: 16px;
+  background-color: white;
+  text-decoration: none;
+  border: 1px solid ${({ theme }) => theme.colors.dominant};
+  color: ${({ theme }) => theme.colors.text};
   ${({ active }) =>
     active &&
     css`
-      background-color: ${({ theme }) =>
-        theme.colors.background.alternativeBox};
-    `}
+      color: white;
+      background-color: ${({ theme }) => theme.colors.dominant};
+    `};
 `;
 
 export const Wrapper = styled.span`
