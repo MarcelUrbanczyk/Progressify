@@ -23,8 +23,13 @@ export const IconWrapper = styled.span`
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  max-height: 20px;
+  max-height: 40px;
   overflow: hidden;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
 `;
 
 export const Title = styled.h2<{ slide?: boolean }>`
@@ -50,10 +55,13 @@ export const ProgressIndicator = styled.span<{ completion?: number }>`
     css`
       background: radial-gradient(
           closest-side,
-          ${({ theme }) => theme.colors.button} 90%,
+          ${({ theme }) => theme.colors.box} 90%,
           transparent 80% 100%
         ),
-        conic-gradient(white ${completion}%, gray 0);
+        conic-gradient(
+          white ${completion}%,
+          ${({ theme }) => theme.colors.dominant} 0
+        );
     `}
 `;
 
@@ -67,6 +75,7 @@ export const DaysLeft = styled.p`
 
 export const TasksCompleted = styled(DaysLeft)`
   margin-top: 0;
+  color: ${({ theme }) => theme.colors.dominant};
 `;
 
 export const Project = styled.div`
@@ -75,9 +84,10 @@ export const Project = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: 3fr 3fr 1fr 1fr;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.button};
-    cursor: pointer;
-    transform: scale(1.02);
-  }
+`;
+
+export const Section = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 `;

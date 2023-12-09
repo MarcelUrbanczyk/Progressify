@@ -7,6 +7,7 @@ import {
   TitleWrapper,
   IconWrapper,
   ProgressIndicator,
+  Section,
 } from "./styled";
 import AddNewProject from "./addNewProject";
 import { useAppSelector } from "../../reduxHooks";
@@ -17,7 +18,7 @@ import { countPrecentage } from "../../countPrecentage";
 const ProjectList = () => {
   const projects = useAppSelector((state) => state.projects);
   return (
-    <>
+    <Section>
       <AddNewProject />
       {projects.map((project) => (
         <Project key={project.id}>
@@ -46,7 +47,7 @@ const ProjectList = () => {
           </IconWrapper>
         </Project>
       ))}
-    </>
+    </Section>
   );
 };
 
