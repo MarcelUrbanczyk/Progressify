@@ -19,7 +19,6 @@ const ProjectList = () => {
   const projects = useAppSelector((state) => state.projects);
   return (
     <Section>
-      <AddNewProject />
       {projects.map((project) => (
         <Project key={project.id}>
           <TitleWrapper>
@@ -47,6 +46,7 @@ const ProjectList = () => {
           </IconWrapper>
         </Project>
       ))}
+      <AddNewProject />
     </Section>
   );
 };
