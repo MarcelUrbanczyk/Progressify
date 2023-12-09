@@ -1,5 +1,5 @@
 import { styled, css } from "styled-components";
-import { ButtonStyles } from "../../../common/styles/button";
+import { ButtonStyle } from "../../../common/styles/button";
 import { Link } from "react-router-dom";
 
 export const StyledNavigation = styled.nav`
@@ -12,11 +12,11 @@ export const StyledNavigation = styled.nav`
 `;
 
 export const NavLink = styled(Link)<{ active?: boolean }>`
-  ${ButtonStyles}
-  border-radius: 16px;
+  ${ButtonStyle}
+  border-radius: 14px;
   background-color: white;
   text-decoration: none;
-  border: 1px solid ${({ theme }) => theme.colors.dominant};
+  border: 2px solid ${({ theme }) => theme.colors.dominant};
   color: ${({ theme }) => theme.colors.text};
   ${({ active }) =>
     active &&
