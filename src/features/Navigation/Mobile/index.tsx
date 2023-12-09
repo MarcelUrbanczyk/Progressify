@@ -8,7 +8,7 @@ const MobileNavigation = () => (
     <Link>
       <Menu />
     </Link>
-    <Header>Projectize</Header>
+    <Header>Progressify</Header>
     <Link>
       <Options />
     </Link>
