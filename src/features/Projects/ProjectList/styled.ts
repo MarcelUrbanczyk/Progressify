@@ -1,5 +1,6 @@
 import { keyframes, styled, css } from "styled-components";
 import { BoxStyles } from "../../../common/styles/box";
+import { SquareButtonStyle } from "../../../common/styles/button";
 
 const slideAnimation = keyframes` 
   0% {
@@ -19,17 +20,8 @@ const slideAnimation = keyframes`
   }
 `;
 
-export const IconWrapper = styled.span`
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  max-height: 40px;
-  overflow: hidden;
-  transition: 0.3s;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-  }
+export const IconWrapper = styled.button`
+  ${SquareButtonStyle}
 `;
 
 export const Title = styled.h2<{ slide?: boolean }>`
@@ -83,11 +75,11 @@ export const Project = styled.div`
   align-items: center;
   display: grid;
   gap: 20px;
-  grid-template-columns: 3fr 3fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
 `;
 
 export const Section = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 30px;
 `;

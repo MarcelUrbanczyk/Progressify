@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import { ButtonStyles } from "../../../../common/styles/button";
+import {
+  ButtonStyle,
+  SquareButtonStyle,
+} from "../../../../common/styles/button";
 import { BoxStyles, AlternativeBoxStyles } from "../../../../common/styles/box";
 
 export const Container = styled.div`
   ${BoxStyles}
+  padding: 5px;
 `;
 
 export const Wrapper = styled.span`
@@ -35,17 +39,7 @@ export const TaskTile = styled.span`
 `;
 
 export const ProjectButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.dominant};
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  height: 40px;
-  padding: 2px 0 0;
-  transition: 0.3s;
-  width: 40px;
-  &:hover {
-    transform: scale(1.05);
-  }
+  ${SquareButtonStyle}
 `;
 
 export const TaskButton = styled(ProjectButton)`
@@ -55,11 +49,11 @@ export const TaskButton = styled(ProjectButton)`
 `;
 
 export const TaskSubmitButton = styled(ProjectButton)`
-  ${ButtonStyles}
+  ${ButtonStyle}
 `;
 
 export const ProjectSubmitButton = styled(TaskSubmitButton)`
-  ${ButtonStyles}
+  ${ButtonStyle}
   margin: 10px;
 `;
 
