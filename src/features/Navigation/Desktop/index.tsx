@@ -14,7 +14,7 @@ const DesktopNavigation = () => {
   return (
     <StyledNavigation>
       <Wrapper>
-        <Header>Projectize</Header>
+        <Header>Progressify</Header>
         <NavLinkWrapper>
           <NavLink
             to={toProjects()}
@@ -26,7 +26,7 @@ const DesktopNavigation = () => {
             to={toTasks()}
             active={location.pathname.startsWith("/tasks")}
           >
-            Daily Tasks
+            Tasks
           </NavLink>
           <NavLink
             to={toGoals()}
@@ -34,7 +34,6 @@ const DesktopNavigation = () => {
           >
             Goals
           </NavLink>
-          <NavLink>Settings</NavLink>
         </NavLinkWrapper>
       </Wrapper>
     </StyledNavigation>
