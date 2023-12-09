@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 export const BoxStyles = css`
-  background-color: ${({ theme }) => theme.colors.background.box};
+  background-color: ${({ theme }) => theme.colors.box};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.item};
   max-height: 60px;
@@ -11,7 +11,7 @@ export const BoxStyles = css`
 `;
 
 export const AlternativeBoxStyles = css`
-  background-color: ${({ theme }) => theme.colors.background.alternativeBox};
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadows.item};
   margin: 10px;

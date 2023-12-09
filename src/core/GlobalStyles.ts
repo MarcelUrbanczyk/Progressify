@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 body {
-  background-color: ${({ theme }) => theme.colors.background.page};
+  background-color: ${({ theme }) => theme.colors.background};
+  color:${({ theme }) => theme.colors.text};
   box-sizing: border-box;
   margin: 0;
   font-family: "Mitr";

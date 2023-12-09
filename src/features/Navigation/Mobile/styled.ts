@@ -10,7 +10,7 @@ export const Header = styled.h1`
 
 export const StyledNavigation = styled.nav`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.background.box};
+  background-color: ${({ theme }) => theme.colors.box};
   box-shadow: ${({ theme }) => theme.shadows.nav};
   display: none;
   justify-content: space-between;

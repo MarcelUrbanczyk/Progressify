@@ -35,7 +35,7 @@ export const TaskTile = styled.span`
 `;
 
 export const ProjectButton = styled.button`
-  background-color: #28323c;
+  background-color: ${({ theme }) => theme.colors.dominant};
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -64,7 +64,6 @@ export const ProjectSubmitButton = styled(TaskSubmitButton)`
 `;
 
 export const Paragraph = styled.p`
-  color: #fff;
   font-family: "Mitr";
   font-size: 16px;
   font-weight: 300;
@@ -74,7 +73,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Divider = styled.hr`
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: 50%;
   border: none;
   height: 1px;
@@ -91,14 +90,12 @@ export const FormWrapper = styled.span`
 `;
 
 export const Label = styled.label`
-  color: white;
   font-weight: 300;
 `;
 
 export const Input = styled.input`
-  background-color: #28323c;
+  background-color: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
-  border: 1px solid #4f6272;
-  color: white;
+  border: 1px solid ${({ theme }) => theme.colors.dominant};
   width: 120px;
 `;

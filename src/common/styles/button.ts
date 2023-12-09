@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 export const ButtonStyles = css`
-  background-color: ${({ theme }) => theme.colors.button};
+  background-color: ${({ theme }) => theme.colors.dominant};
   color: white;
   white-space: nowrap;
   border: none;
