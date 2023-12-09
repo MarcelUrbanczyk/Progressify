@@ -1,25 +1,20 @@
 const colorCollection = {
-  blueBayoux: "#4F6272",
-  ebonyClay: "#202933",
-  riverBed: "#404E5C",
-  snowDrift: "#F2F7F2",
+  crimson: "#DC143C",
+  sauvignon: "#FFF6F4",
+  fairPink: "#ffeae8",
+  kabul: "#574240",
 };
 
 export const theme = {
   colors: {
-    background: {
-      box: colorCollection.riverBed,
-      alternativeBox: colorCollection.blueBayoux,
-      page: colorCollection.blueBayoux,
-      item: colorCollection.ebonyClay,
-      dark: colorCollection.ebonyClay,
-    },
-    text: colorCollection.snowDrift,
-    button: colorCollection.ebonyClay,
+    dominant: colorCollection.crimson,
+    background: colorCollection.sauvignon,
+    box: colorCollection.fairPink,
+    text: colorCollection.kabul,
   },
   shadows: {
-    nav: "0px 4px 10px 2px rgba(64, 78, 92, 0.50)",
-    item: "1px 1px 2px 1px rgba(0, 0, 0, 0.25)",
+    nav: "rgba(0, 0, 0, 0.1) 0px 10px 50px",
+    item: " rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;",
   },
   breakpoints: {
     mobileMax: "767px",
