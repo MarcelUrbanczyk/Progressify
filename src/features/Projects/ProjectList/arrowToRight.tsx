@@ -2,10 +2,9 @@ import * as React from "react";
 import { SVGProps } from "react";
 const ArrowToRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width="7"
-    height="12"
+    width="8%"
     viewBox="0 0 7 12"
-    fill="#FFFFFF"
+    fill="crimson"
     cursor={"pointer"}
     xmlns="http://www.w3.org/2000/svg"
   >
