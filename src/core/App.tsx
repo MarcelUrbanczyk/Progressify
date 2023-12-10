@@ -3,7 +3,7 @@ import ProjectList from "../features/Projects/ProjectList/index";
 import Navigation from "../features/Navigation/index";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
-import { toProjects } from "../features/routes";
+import { toGoals, toProjects, toTasks } from "./routes";
 
 const App = () => {
   return (
@@ -13,6 +13,12 @@ const App = () => {
         <Switch>
           <Route path={toProjects}>
             <ProjectList />
+          </Route>
+          <Route path={toTasks}>
+            <span></span>
+          </Route>
+          <Route path={toGoals}>
+            <span></span>
           </Route>
           <Route path="/">
             <Redirect to={toProjects} />
