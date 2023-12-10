@@ -3,7 +3,7 @@ import { SVGProps } from "react";
 const TrashBinIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
+    fill="crimson"
     viewBox="0 0 24 24"
     width="20px"
     {...props}

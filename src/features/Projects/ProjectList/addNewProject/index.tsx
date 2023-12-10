@@ -15,6 +15,7 @@ import {
   TaskTile,
   FormWrapper,
   ProjectSubmitButton,
+  IconWrapper,
 } from "./styled";
 import { useState } from "react";
 import React from "react";
@@ -124,11 +125,13 @@ export default () => {
           tasks.map((task) => (
             <TaskTile>
               <Paragraph>{task.name}</Paragraph>
-              <TrashBinIcon
-                onClick={() => {
-                  setTasks(tasks.filter((t) => t.id !== task.id));
-                }}
-              />
+              <IconWrapper>
+                <TrashBinIcon
+                  onClick={() => {
+                    setTasks(tasks.filter((t) => t.id !== task.id));
+                  }}
+                />
+              </IconWrapper>
             </TaskTile>
           ))}
 

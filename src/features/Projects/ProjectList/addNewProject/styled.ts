@@ -16,6 +16,15 @@ export const Wrapper = styled.span`
   padding: 10px;
 `;
 
+export const IconWrapper = styled.span`
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+
 export const TaskCreatorWrapper = styled.span`
   align-items: center;
   display: flex;
