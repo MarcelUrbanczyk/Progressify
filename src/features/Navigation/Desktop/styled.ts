@@ -11,15 +11,15 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const NavLink = styled(Link)<{ active?: boolean }>`
+export const NavLink = styled(Link)<{ $active?: boolean }>`
   ${ButtonStyle}
   border-radius: 14px;
   background-color: white;
   text-decoration: none;
   border: 2px solid ${({ theme }) => theme.colors.dominant};
   color: ${({ theme }) => theme.colors.text};
-  ${({ active }) =>
-    active &&
+  ${({ $active }) =>
+    $active &&
     css`
       color: white;
       background-color: ${({ theme }) => theme.colors.dominant};

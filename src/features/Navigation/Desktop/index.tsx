@@ -7,7 +7,7 @@ import {
   NavLink,
 } from "./styled";
 import { useLocation } from "react-router-dom";
-import { toProjects, toTasks, toGoals } from "../../routes";
+import { toProjects, toTasks, toGoals } from "../../../core/routes";
 
 const DesktopNavigation = () => {
   const location = useLocation();
@@ -17,20 +17,20 @@ const DesktopNavigation = () => {
         <Header>Progressify</Header>
         <NavLinkWrapper>
           <NavLink
-            to={toProjects()}
-            active={location.pathname.startsWith("/projects")}
+            to={toProjects}
+            $active={location.pathname.startsWith("/projects")}
           >
             Projects
           </NavLink>
           <NavLink
-            to={toTasks()}
-            active={location.pathname.startsWith("/tasks")}
+            to={toTasks}
+            $active={location.pathname.startsWith("/tasks")}
           >
             Tasks
           </NavLink>
           <NavLink
-            to={toGoals()}
-            active={location.pathname.startsWith("/goals")}
+            to={toGoals}
+            $active={location.pathname.startsWith("/goals")}
           >
             Goals
           </NavLink>
