@@ -7,7 +7,6 @@ import { BoxStyles, AlternativeBoxStyles } from "../../../../common/styles/box";
 
 export const Container = styled.div`
   ${BoxStyles}
-  padding: 5px;
 `;
 
 export const Wrapper = styled.span`
