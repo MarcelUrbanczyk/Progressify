@@ -82,4 +82,7 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    grid-template-columns: 1fr;
+  }
 `;
