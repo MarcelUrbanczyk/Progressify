@@ -10,6 +10,13 @@ export const StyledNavigation = styled.nav`
     display: none;
   }
 `;
+export const Logo = styled(Link)`
+  color: ${({ theme }) => theme.colors.text};
+  font-family: "Mitr";
+  font-size: 32px;
+  font-weight: 400;
+  text-decoration: none;
+`;
 
 export const NavLink = styled(Link)<{ $active?: boolean }>`
   ${ButtonStyle}
@@ -42,12 +49,4 @@ export const NavLinkWrapper = styled.span`
   display: flex;
   gap: 12px;
   margin-top: 5px;
-`;
-
-export const Header = styled.h1`
-  color: ${({ theme }) => theme.colors.text};
-  font-family: "Mitr";
-  font-size: 32px;
-  font-weight: 400;
-  margin: 0;
 `;

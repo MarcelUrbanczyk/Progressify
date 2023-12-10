@@ -1,7 +1,7 @@
 import React from "react";
 import {
   StyledNavigation,
-  Header,
+  Logo,
   Wrapper,
   NavLinkWrapper,
   NavLink,
@@ -14,7 +14,7 @@ const DesktopNavigation = () => {
   return (
     <StyledNavigation>
       <Wrapper>
-        <Header>Progressify</Header>
+        <Logo to="/">Progressify</Logo>
         <NavLinkWrapper>
           <NavLink
             to={toProjects}
