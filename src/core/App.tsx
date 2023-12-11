@@ -1,6 +1,6 @@
 import { Main } from "../common/Main";
 import ProjectList from "../features/Projects/ProjectList/index";
-import Navigation from "../features/Navigation/index";
+import Navigation from "../features/Navigation";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
 import { toGoals, toProjects, toTasks } from "./routes";
