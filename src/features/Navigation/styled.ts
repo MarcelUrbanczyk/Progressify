@@ -57,7 +57,7 @@ export const IconWrapper = styled.span<{ $flipped?: boolean }>`
   ${({ $flipped }) =>
     $flipped &&
     css`
-      transform: rotate(-90deg);
+      transform: rotate(90deg);
     `}
 `;
 
