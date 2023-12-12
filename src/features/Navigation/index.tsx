@@ -20,10 +20,12 @@ const Navigation = () => {
 
   const toggleIsMenuOpened = () => {
     setIsMenuOpened(!isMenuOpened);
+    if (areSettingsOpened) setAreSettingsOpened(!areSettingsOpened);
   };
 
   const toggleAreSettingsOpened = () => {
     setAreSettingsOpened(!areSettingsOpened);
+    if (isMenuOpened) setIsMenuOpened(!isMenuOpened);
   };
 
   return (
