@@ -7,6 +7,8 @@ import {
   NavLinkWrapper,
   NavLink,
   IconWrapper,
+  MobileNavLinkWrapper,
+  Divider,
 } from "./styled";
 import { useLocation } from "react-router-dom";
 import { toProjects, toTasks, toGoals } from "../../core/routes";
@@ -59,9 +61,29 @@ const Navigation = () => {
           </NavLink>
         </NavLinkWrapper>
       </Wrapper>
-      {isMenuOpened || areSettingsOpened ? (
+      {isMenuOpened ? (
         <>
-          <NavLinkWrapper></NavLinkWrapper>
+          <Divider />
+          <MobileNavLinkWrapper>
+            <NavLink
+              to={toProjects}
+              $active={location.pathname.startsWith("/projects")}
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to={toTasks}
+              $active={location.pathname.startsWith("/tasks")}
+            >
+              Tasks
+            </NavLink>
+            <NavLink
+              to={toGoals}
+              $active={location.pathname.startsWith("/goals")}
+            >
+              Goals
+            </NavLink>
+          </MobileNavLinkWrapper>
         </>
       ) : (
         ""

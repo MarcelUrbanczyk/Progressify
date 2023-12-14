@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: ${({ theme }) => theme.shadows.nav};
-  height: 100px;
+  padding: 30px;
 `;
 export const Logo = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
@@ -68,4 +68,22 @@ export const NavLinkWrapper = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
     display: none;
   }
+`;
+
+export const MobileNavLinkWrapper = styled.span`
+  display: none;
+  gap: 46px;
+  margin-top: 24px;
+  justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}) {
+    display: flex;
+  }
+`;
+
+export const Divider = styled.hr`
+  margin-top: 24px;
+  height: 2px;
+  width: 80%;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.dominant};
 `;
