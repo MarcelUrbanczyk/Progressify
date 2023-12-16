@@ -11,7 +11,7 @@ import {
   Divider,
 } from "./styled";
 import { useLocation } from "react-router-dom";
-import { toProjects, toTasks, toGoals } from "../../core/routes";
+import { toProjects, toTasks, toGoals, toSettings } from "../../core/routes";
 import Menu from "./menu";
 import Options from "./options";
 
@@ -59,6 +59,12 @@ const Navigation = () => {
           >
             Goals
           </NavLink>
+          <NavLink
+            to={toSettings}
+            $active={location.pathname.startsWith("/settings")}
+          >
+            Settings
+          </NavLink>
         </NavLinkWrapper>
       </Wrapper>
       {isMenuOpened ? (
@@ -82,6 +88,12 @@ const Navigation = () => {
               $active={location.pathname.startsWith("/goals")}
             >
               Goals
+            </NavLink>
+            <NavLink
+              to={toSettings}
+              $active={location.pathname.startsWith("/settings")}
+            >
+              Settings
             </NavLink>
           </MobileNavLinkWrapper>
         </>
