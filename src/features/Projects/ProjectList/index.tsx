@@ -12,7 +12,7 @@ import {
 import AddNewProject from "./addNewProject";
 import { useAppSelector } from "../../reduxHooks";
 import getDaysLeft from "../../getDaysLeft";
-import ArrowToRight from "./arrowToRight";
+import ArrowToRight from "../../../common/svg/arrowToRight";
 import { countPrecentage } from "../../countPrecentage";
 
 const ProjectList = () => {

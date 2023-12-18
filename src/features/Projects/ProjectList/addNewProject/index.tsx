@@ -1,5 +1,5 @@
-import PlusIcon from "./plusIcon";
-import MinusIcon from "./minusIcon";
+import PlusIcon from "../../../../common/svg/plusIcon";
+import MinusIcon from "../../../../common/svg/minusIcon";
 import {
   AlternativeBox,
   Container,
@@ -19,7 +19,7 @@ import {
 } from "./styled";
 import { useState } from "react";
 import React from "react";
-import TrashBinIcon from "./trashbinIcon";
+import TrashBinIcon from "../../../../common/svg/trashbinIcon";
 import { nanoid } from "nanoid";
 import { formatDate } from "../../../formatDate";
 import { useAppDispatch } from "../../../reduxHooks";
