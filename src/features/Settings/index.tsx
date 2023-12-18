@@ -1,6 +1,12 @@
 import React from "react";
-import { Wrapper } from "./styled";
+import { Box, Paragraph, Wrapper } from "./styled";
 
-const Settings = () => <Wrapper></Wrapper>;
+const Settings = () => (
+  <Wrapper>
+    <Box>
+      <Paragraph>Theme</Paragraph>
+    </Box>
+  </Wrapper>
+);
 
 export default Settings;
