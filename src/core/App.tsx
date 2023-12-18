@@ -4,6 +4,7 @@ import Navigation from "../features/Navigation";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
 import { toGoals, toProjects, toSettings, toTasks } from "./routes";
+import Settings from "../features/Settings";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
             <span></span>
           </Route>
           <Route path={toSettings}>
-            <span></span>
+            <Settings />
           </Route>
           <Route path="/">
             <Redirect to={toProjects} />
