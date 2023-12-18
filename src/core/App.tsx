@@ -3,7 +3,7 @@ import ProjectList from "../features/Projects/ProjectList/index";
 import Navigation from "../features/Navigation";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
-import { toGoals, toProjects, toTasks } from "./routes";
+import { toGoals, toProjects, toSettings, toTasks } from "./routes";
 
 const App = () => {
   return (
@@ -18,6 +18,9 @@ const App = () => {
             <span></span>
           </Route>
           <Route path={toGoals}>
+            <span></span>
+          </Route>
+          <Route path={toSettings}>
             <span></span>
           </Route>
           <Route path="/">
