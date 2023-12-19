@@ -32,7 +32,7 @@ export default () => {
     id: string;
   }
 
-  const [addNewProject, setAddNewProject] = useState(true);
+  const [addNewProject, setAddNewProject] = useState(false);
   const [projectName, setProjectName] = useState("");
   const [projectDeadline, setProjectDeadline] = useState("");
   const [addNewTask, setAddNewTask] = useState(false);
