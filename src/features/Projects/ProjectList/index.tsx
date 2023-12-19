@@ -5,7 +5,7 @@ import {
   Project,
   TasksCompleted,
   TitleWrapper,
-  IconWrapper,
+  StyledLink,
   ProgressIndicator,
   Section,
 } from "./styled";
@@ -41,9 +41,9 @@ const ProjectList = () => {
                 project.tasks.length}
             </TasksCompleted>
           </ProgressIndicator>
-          <IconWrapper>
+          <StyledLink to={`/projects/${project.id}`}>
             <ArrowToRight />
-          </IconWrapper>
+          </StyledLink>
         </Project>
       ))}
       <AddNewProject />

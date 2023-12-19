@@ -1,4 +1,5 @@
 import { keyframes, styled, css } from "styled-components";
+import { Link } from "react-router-dom";
 import { BoxStyles } from "../../../common/styles/box";
 import { SquareButtonStyle } from "../../../common/styles/button";
 
@@ -20,8 +21,11 @@ const slideAnimation = keyframes`
   }
 `;
 
-export const IconWrapper = styled.button`
+export const StyledLink = styled(Link)`
   ${SquareButtonStyle}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Title = styled.h2<{ slide?: boolean }>`
