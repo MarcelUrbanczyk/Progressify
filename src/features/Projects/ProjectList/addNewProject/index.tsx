@@ -34,6 +34,7 @@ export default () => {
 
   const [addNewProject, setAddNewProject] = useState(false);
   const [projectName, setProjectName] = useState("");
+  const [projectDescription, setProjectDescription] = useState("");
   const [projectDeadline, setProjectDeadline] = useState("");
   const [addNewTask, setAddNewTask] = useState(false);
   const [taskName, setTaskName] = useState("");
@@ -63,6 +64,7 @@ export default () => {
         creationDate: formatDate(new Date()),
         deadline: projectDeadline,
         name: projectName,
+        description: projectDescription,
         tasks: tasks,
         id: nanoid(),
       };
@@ -101,13 +103,21 @@ export default () => {
       <Divider />
       <form>
         <FormWrapper>
-          <Label>Project name: </Label>
+          <Label>Name: </Label>
           <Input
             type="text"
             required
             value={projectName}
             onChange={(event) => {
               setProjectName(event.target.value);
+            }}
+          />
+          <Label>Description: </Label>
+          <Input
+            type="text"
+            value={projectDescription}
+            onChange={(event) => {
+              setProjectDescription(event.target.value);
             }}
           />
           <Label>Deadline: </Label>
