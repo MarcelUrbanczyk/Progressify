@@ -11,6 +11,7 @@ interface projectState {
   creationDate: Date;
   deadline: Date;
   name: string;
+  description: string;
   tasks: task[];
   id: string;
 }
