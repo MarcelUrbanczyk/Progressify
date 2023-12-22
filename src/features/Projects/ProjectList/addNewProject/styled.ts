@@ -99,5 +99,5 @@ export const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.dominant};
-  width: 120px;
+  width: 200px;
 `;
